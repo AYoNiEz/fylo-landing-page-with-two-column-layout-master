@@ -1,0 +1,772 @@
+$VeryDarkBlue: hsl(243, 87%, 12%);
+$DesaturatedBlue: hsl(238, 22%, 44%);
+$BrightBlue: hsl(224, 93%, 58%);
+$ModerateCyan: hsl(170, 45%, 43%);
+$LightGrayishBlue: hsl(240, 75%, 98%);
+$LighGray: hsl(0, 0%, 75%);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+main{
+    width: 100vw;
+    .container{
+        width: 100%;
+        .header{
+            padding: 4rem 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .navbar{
+                display: flex;
+                align-items: center;
+                gap: 3.7rem;
+                .navbar-item{
+                    color: $DesaturatedBlue;
+                }
+            }
+        }
+        .banner{
+            padding:0rem 5rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            .banner-content{
+                width: 50%;
+                h1{
+                    font-size: 40px;
+                    color: $VeryDarkBlue;
+                    line-height: 3.5rem;
+                    font-family: 'Raleway', sans-serif;
+                }
+                p{
+                    margin: 1rem 0rem;
+                    font-size: 17px;
+                    color: $VeryDarkBlue;
+                    padding-right: 2rem;
+                    line-height: 1.5rem;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 400;
+                    letter-spacing: 0.5px;
+                }
+                form.error input{
+                    border: 2px solid hsl(0, 93%, 68%);
+                }
+                .alert{
+                    color: hsl(0, 93%, 68%);
+                    display: none;
+                    margin-top: 10px; 
+                }
+                form.error .alert{
+                    display: block;
+                }
+                .email-input{
+                    width: 320px;
+                    padding: 12px;
+                    font-size: 16px;
+                    border: 1px solid black;
+                    padding-left: 1rem;
+                    border-radius: 0.2rem;
+                    margin-right: 1rem;
+                }
+                .email-input:focus{
+                    border: 1px solid $BrightBlue;
+                    outline: none;
+                }
+                .email-input::placeholder {
+                    color: rgba(128, 128, 128, 0.392);
+                    font-size: 14px;
+                    
+                }
+                .btn-submit{
+                    width: 200px;
+                   
+                    padding: 12px;
+                    font-size: 14px;
+                    color: white;
+                    background-color: $BrightBlue;
+                    border: 1px solid $BrightBlue;
+                    border-radius: 0.2rem;
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: 700;
+                    cursor: pointer;
+                    box-shadow: 0px 2px 3px rgb(198, 198, 198);
+                }
+                .btn-submit:hover{
+                    background-color: hsl(224, 100%, 76%);
+                    border: 1px solid hsl(224, 100%, 76%);
+                }
+            }
+            .banner-image{
+                width: 50%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .background{
+            margin-top: 10rem;
+            .mobile{
+                display: none;
+            }
+            .desktop{
+                display: block;
+            }
+        }
+        .section{
+            padding: 4rem 5rem 6rem 5rem;
+            display: flex;
+            justify-content: center;
+            
+            margin-top: -1rem;
+            background-color: $LightGrayishBlue;
+            .section-content{
+                width: 60%;
+                h1{
+                    font-size: 40px;
+                    color: $VeryDarkBlue;
+                    
+                    font-family: 'Raleway', sans-serif;
+                }
+                p{
+                    margin-top: 2.5rem;
+                    font-size: 16px;
+                    color: $VeryDarkBlue;
+                    padding-right: 14rem;
+                    line-height: 1.5rem;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 400;
+                }
+                .work{
+                    width: 170px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    color: $ModerateCyan;
+                    margin: 1rem 0rem;
+                    font-family: 'Open Sans', sans-serif;
+                    border-bottom: 1px solid $ModerateCyan;
+                    padding-bottom: 3px;
+                    img{
+                        margin-left: 0.5rem;
+                    }
+                }
+                .work:hover{
+                    color: hsl(170, 48%, 64%);
+                    border-bottom: 1px solid hsl(170, 48%, 64%);
+                }
+                .section-box{
+                    border-radius: 0.5rem;
+                    margin-top: 3rem;
+                    padding:1.5rem 2rem;
+                    width: 360px;
+                    background-color: white;
+                    box-shadow: 0px 2px 5px 2px rgba(182, 182, 182, 0.134);
+                    .box-content{
+                        padding: 0;
+                        margin-top: 0.5rem;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    .user{
+                        margin-top: 1rem;
+                        display: flex;
+                        align-items: center;
+                        .user-image{
+                            margin-right: 0.4rem;
+                            width: 10%;
+                            img{
+                                border-radius: 50%;
+                                width: 100%;
+                            }
+                        }
+                        .profile{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            h2{
+                                font-size: 11px;
+                                letter-spacing: 1px;
+                            }
+                            h3{
+                                font-size: 9px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+            .section-image{
+                width: 40%;
+                img{
+                    position: top;
+                    width: 105%;
+                    margin-top: 1rem;
+                }
+            }
+        }
+        .early-access-section{
+            padding:6rem 5rem;
+            background-color: $DesaturatedBlue;
+            display: flex;
+            justify-content: center;
+            .early-left{
+                width: 50%;
+                .access-today{
+                    font-size: 32px;
+                    color: white;
+                    line-height: 3.5rem;
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: 700;
+                }
+                .access-paragraph{
+                    margin-top: 1rem;
+                    font-size: 17px;
+                    color: white;
+                    padding-right: 7rem;
+                    line-height: 1.5rem;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 400;
+                }
+            }
+            .early-right{
+                width: 50%;
+                padding-left: 7rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .input-box2{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                form.valid input{
+                    border: 1px solid hsl(0, 93%, 68%);
+                }
+                .check{
+                    color: white;
+                    display: none;
+                    margin-top: 10px; 
+                }
+                form.valid .check{
+                    display: block;
+                }
+                .email-input{
+                    width: 90%;
+                    padding: 12px;
+                    font-size: 16px;
+                    border: 1px solid black;
+                    padding-left: 1rem;
+                    border-radius: 0.2rem;
+                }
+                .email-input:focus{
+                    border: 1px solid $BrightBlue;
+                    outline: none;
+                }
+                .email-input::placeholder {
+                    color: rgba(128, 128, 128, 0.392);
+                    font-size: 14px;
+                    
+                }
+                .btn-submit{
+                    width: 200px;
+                    margin-top: 1rem;
+                    padding: 12px;
+                    font-size: 14px;
+                    color: white;
+                    background-color: $BrightBlue;
+                    border: 1px solid $BrightBlue;
+                    border-radius: 0.2rem;
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: 700;
+                    cursor: pointer;
+                    box-shadow: 0px 2px 3px rgb(71, 71, 71);
+                }
+                .btn-submit:hover{
+                    background-color: hsl(224, 100%, 76%);
+                    border: 1px solid hsl(224, 100%, 76%);
+                }
+            }
+        }
+        .footer{
+            padding: 5rem;
+            background-color: $VeryDarkBlue;
+            
+            .logo{
+                width: 180px;
+            }
+            .footer-wrapper{
+                width: 90%;
+                margin-top: 1rem;
+                display: flex;
+                justify-content: space-between;
+                .info{
+                    .info-item{
+                        display: flex;
+                        margin-bottom: 1rem;
+                        .item{
+                            font-family: 'Open Sans', sans-serif;
+                            font-weight: 400;
+                            padding-left: 1rem;
+                            color: white;
+                        }
+                    }
+                }
+                .footer-menu{
+                    .menu-item{
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 400;
+                        padding-left: 1rem;
+                        color: white;
+                        margin-bottom: 1rem;
+                    }
+                    .menu-item:hover{
+                        color: hsl(239, 43%, 45%);
+                    }
+                }
+                .social{
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: baseline;
+                    .bg-social{
+                        margin: 0 0.5rem;
+                        padding: 7px 15px;
+                        width: 15px;
+                        border: 1px solid rgb(255, 255, 255);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 60px;
+                    }
+                    .bg-social:hover{
+                        border: 1px solid hsl(239, 43%, 45%);
+                    }
+                    .fab.fa-facebook-f{
+                        color: white;
+                    }
+                    .fab.fa-facebook-f:hover{
+                        color: hsl(239, 43%, 45%);
+                       
+                    }
+                    .fab.fa-twitter{
+                        color: white;
+                    }
+                    .fab.fa-twitter:hover{
+                        color: hsl(239, 43%, 45%);
+                    }
+                    .fab.fa-instagram{
+                        color: white;
+                    }
+                    .fab.fa-instagram:hover{
+                        color: hsl(239, 43%, 45%);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 800px){
+    main{
+        .container{
+            .header{
+                padding:2.5rem 2rem;
+                .logo-header{
+                    img{
+                        width: 100px;
+                    }
+                }
+                .navbar{
+                    gap: 1.5rem;
+                    .navbar-item{
+                        color: $DesaturatedBlue;
+                        font-size: 12px;
+                    }
+                }
+            }
+            .banner{
+                padding:0rem 2rem;
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                .banner-content{
+                    width: 100%;
+                    text-align: center;
+                    h1{
+                        margin-top: 3rem;
+                        font-size: 26px;
+                        color: $VeryDarkBlue;
+                        line-height: 2.5rem;
+                        font-family: 'Raleway', sans-serif;
+                    }
+                    p{
+                        margin: 1rem 0rem;
+                        font-size: 16px;
+                        color: $VeryDarkBlue;
+                        padding-right: 0rem;
+                        line-height: 1.5rem;
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 400;
+                        letter-spacing: 0.5px;
+                    }
+                    form.error input{
+                        border: 2px solid hsl(0, 93%, 68%);
+                    }
+                    .alert{
+                        color: hsl(0, 93%, 68%);
+                        display: none;
+                        margin-top: 10px; 
+                    }
+                    form.error .alert{
+                        display: block;
+                    }
+                    .email-input{
+                        width: 100%;
+                        padding: 12px;
+                        font-size: 16px;
+                        border: 1px solid black;
+                        padding-left: 1rem;
+                        border-radius: 0.2rem;
+                        margin-right: 0rem;
+                        margin-top: 2rem;
+                    }
+                    .email-input:focus{
+                        border: 1px solid $BrightBlue;
+                        outline: none;
+                    }
+                    .email-input::placeholder {
+                        color: rgba(128, 128, 128, 0.392);
+                        font-size: 14px;
+                        
+                    }
+                    .btn-submit{
+                        width: 100%;
+                        padding: 12px;
+                        font-size: 14px;
+                        color: white;
+                        background-color: $BrightBlue;
+                        border: 1px solid $BrightBlue;
+                        border-radius: 0.2rem;
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: 700;
+                        cursor: pointer;
+                        box-shadow: 0px 2px 3px rgb(198, 198, 198);
+                    }
+                    .btn-submit:hover{
+                        background-color: hsl(224, 100%, 76%);
+                        border: 1px solid hsl(224, 100%, 76%);
+                    }
+                }
+                .banner-image{
+                    margin-top: 5rem;
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .background{
+                margin-top: 10rem;
+                .mobile{
+                    display: block;
+
+                }
+                .desktop{
+                    display: none;
+                }
+            }
+            .section{
+                padding: 2rem 2rem 2rem 2rem;
+                display: flex;
+                justify-content: center;
+                flex-direction: column-reverse;
+                margin-top: -1rem;
+                background-color: $LightGrayishBlue;
+                .section-content{
+                    width: 100%;
+                    
+                    h1{
+                        text-align: center;
+                        font-size: 19px;
+                        color: $VeryDarkBlue;
+                        font-family: 'Raleway', sans-serif;
+                    }
+                    p{
+                        margin-top: 2.5rem;
+                        font-size: 16px;
+                        color: $VeryDarkBlue;
+                        padding-right: 0rem;
+                        line-height: 1.5rem;
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 400;
+                    }
+                    .work{
+                        text-align: center;
+                        width: 170px;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $ModerateCyan;
+                        margin: 3rem auto;
+                        font-family: 'Open Sans', sans-serif;
+                        border-bottom: 1px solid $ModerateCyan;
+                        padding-bottom: 3px;
+                        img{
+                            margin-left: 0.5rem;
+                        }
+                    }
+                    .work:hover{
+                        color: hsl(170, 48%, 64%);
+                        border-bottom: 1px solid hsl(170, 48%, 64%);
+                    }
+                    .section-box{
+                        border-radius: 0.5rem;
+                        margin-top: 3rem;
+                        margin: 0rem auto;
+                        padding:1.5rem 2rem;
+                        width: 90%;
+                        background-color: white;
+                        box-shadow: 0px 2px 5px 2px rgba(182, 182, 182, 0.134);
+                        .box-content{
+                            padding: 0;
+                            margin-top: 0.5rem;
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+                        .user{
+                            margin-top: 1rem;
+                            display: flex;
+                            align-items: center;
+                            .user-image{
+                                margin-right: 0.4rem;
+                                width: 10%;
+                                img{
+                                    border-radius: 50%;
+                                    width: 100%;
+                                }
+                            }
+                            .profile{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                h2{
+                                    font-size: 11px;
+                                    letter-spacing: 1px;
+                                }
+                                h3{
+                                    font-size: 9px;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                }
+                .section-image{
+                    width: 100%;
+                    display: flex;
+                    margin-bottom: 5rem;
+                    margin-top: 2rem;
+                    img{
+                        position: top;
+                        width: 100%;
+                        margin-top: 2rem;
+                        
+                    }
+                }
+            }
+            .early-access-section{
+                padding:2rem 2rem;
+                text-align: center;
+                background-color: $DesaturatedBlue;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .early-left{
+                    width: 100%;
+                    .access-today{
+                        font-size: 20px;
+                        color: white;
+                        line-height: 3.5rem;
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: 700;
+                    }
+                    .access-paragraph{
+                        margin-top: 1rem;
+                        margin: 0rem auto;
+                        font-size: 17px;
+                        color: white;
+                        padding-right: 0rem;
+                        line-height: 1.5rem;
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 400;
+                    }
+                }
+                .early-right{
+                    width: 100%;
+                    padding-left: 0rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .input-box2{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                    form.valid input{
+                        border: 1px solid hsl(0, 93%, 68%);
+                    }
+                    .check{
+                        color: white;
+                        display: none;
+                        margin-top: 10px; 
+                    }
+                    form.valid .check{
+                        display: block;
+                    }
+                    .email-input{
+                        margin: 0rem auto;
+                        margin-top: 2rem;
+                        margin-bottom: 1rem;
+                        width: 80%;
+                        padding: 12px;
+                        font-size: 16px;
+                        border: 1px solid black;
+                        padding-left: 1rem;
+                        border-radius: 0.2rem;
+                    }
+                    .email-input:focus{
+                        border: 1px solid $BrightBlue;
+                        outline: none;
+                    }
+                    .email-input::placeholder {
+                        color: rgba(128, 128, 128, 0.392);
+                        font-size: 14px;
+                        
+                    }
+                    .btn-submit{
+                        width: 80%;
+                        margin-top: 0rem;
+                        margin: 0rem auto;
+                        padding: 12px;
+                        font-size: 14px;
+                        color: white;
+                        background-color: $BrightBlue;
+                        border: 1px solid $BrightBlue;
+                        border-radius: 0.2rem;
+                        font-family: 'Raleway', sans-serif;
+                        font-weight: 700;
+                        cursor: pointer;
+                        box-shadow: 0px 2px 3px rgb(71, 71, 71);
+                    }
+                    .btn-submit:hover{
+                        background-color: hsl(224, 100%, 76%);
+                        border: 1px solid hsl(224, 100%, 76%);
+                    }
+                }
+            }
+            .footer{
+                padding:5rem 2rem;
+                background-color: $VeryDarkBlue;
+                
+                .logo{
+                    width: 180px;
+                }
+                .footer-wrapper{
+                    width: 100%;
+                    margin-top: 1rem;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    .info{
+                        .info-item{
+                            display: flex;
+                            margin-bottom: 1rem;
+                            .item{
+                                font-family: 'Open Sans', sans-serif;
+                                font-weight: 400;
+                                padding-left: 1rem;
+                                color: white;
+                            }
+                        }
+                    }
+                    .footer-menu{
+                        margin: 1rem 0rem;
+                        .menu-item{
+                            font-family: 'Open Sans', sans-serif;
+                            font-weight: 400;
+                            padding-left: 1rem;
+                            color: white;
+                            margin-bottom: 1rem;
+                        }
+                        .menu-item:hover{
+                            color: hsl(239, 43%, 45%);
+                        }
+                    }
+                    .social{
+                        margin: 0rem auto;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: baseline;
+                        .bg-social{
+                            margin: 0 0.5rem;
+                            padding: 7px 15px;
+                            width: 15px;
+                            border: 1px solid rgb(255, 255, 255);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 60px;
+                        }
+                        .bg-social:hover{
+                            border: 1px solid hsl(239, 43%, 45%);
+                        }
+                        .fab.fa-facebook-f{
+                            color: white;
+                        }
+                        .fab.fa-facebook-f:hover{
+                            color: hsl(239, 43%, 45%);
+                           
+                        }
+                        .fab.fa-twitter{
+                            color: white;
+                        }
+                        .fab.fa-twitter:hover{
+                            color: hsl(239, 43%, 45%);
+                        }
+                        .fab.fa-instagram{
+                            color: white;
+                        }
+                        .fab.fa-instagram:hover{
+                            color: hsl(239, 43%, 45%);
+                        }
+                    }
+                }
+    
+            }
+        }
+    }
+}
+@media only screen and(max-width:1240px) {
+    main{
+        .container{
+            .banner{
+                .banner-content{
+                    .btn-submit{
+                        margin-top: 1rem;
+                        margin-left: none;
+                    }
+                }
+            }
+        }
+    }
+}
